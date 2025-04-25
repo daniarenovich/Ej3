@@ -74,19 +74,8 @@ def main():
     if opcion == '1':
         mostrar_vuelos_disponibles(vuelos)
     elif opcion == '2':
-        #extraer método
-        nombre = input("Ingrese su nombre: ")
-        apellido = input("Ingrese su apellido: ")
-        edad = int(input("Ingrese su edad: "))
-        telefono = input("Ingrese su número de teléfono: ")
-        correo = input("Ingrese su correo electrónico: ")
-
-        pasajero = Pasajero(nombre, apellido, edad, telefono, correo)
-
-        #extraer método
-        numero = input("Ingrese el número de vuelo que desea reservar: ")
-        cantidad = int(input("Ingrese la cantidad de asientos que desea reservar (máximo 10): "))
-
+        pasajero = Pasajero.crear_pasajero()
+        numero, cantidad = Vuelo.obtener_reserva()
         reservar_vuelo(vuelos, numero, pasajero, cantidad)
     else:
         print("Opción no válida.")
