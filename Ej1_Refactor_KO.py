@@ -9,6 +9,11 @@ class Vuelo:
         self.salida = salida
         self.llegada = llegada
         self.precio = precio
+    
+    def obtener_reserva():
+        numero = input("Ingrese el número de vuelo que desea reservar: ")
+        cantidad = int(input("Ingrese la cantidad de asientos que desea reservar (máximo 10): "))
+        return numero, cantidad
 
 class Pasajero:
     def __init__(self, nombre, apellido, edad, telefono, correo):
