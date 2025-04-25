@@ -16,7 +16,16 @@ class Pasajero:
         self.apellido = apellido
         self.edad = edad
         self.telefono = telefono
-        self.correo = correo
+        self.correo = correo 
+
+    def crear_pasajero():
+        nombre = input("Ingrese su nombre: ")
+        apellido = input("Ingrese su apellido: ")
+        edad = int(input("Ingrese su edad: "))
+        telefono = input("Ingrese su número de teléfono: ")
+        correo = input("Ingrese su correo electrónico: ")
+
+        return Pasajero(nombre, apellido, edad, telefono, correo)
 
 class Informacion:
     def __init__(self, vuelo, pasajero, asientos):
